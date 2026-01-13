@@ -77,4 +77,4 @@ HEALTHCHECK --interval=10s --timeout=5s --start-period=15s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
 
 # Run the MCP server
-CMD ["uv", "run", "--no-sync", "main.py"]
+CMD ["uv", "run", "--no-sync", "main.py", "--config", "config/config-docker-neo4j.yaml"]
